@@ -8,9 +8,6 @@
 .body {
   width: 100%;
   height: auto;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-image:url('/src/assets/images/bg-img.jpg');
   background-position: center;
   background-attachment: fixed;
