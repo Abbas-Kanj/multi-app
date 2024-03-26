@@ -1,1 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
 
+.body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image:url('/src/assets/images/bg-img.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.nav-bar {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.nav-bar-anchors button {
+  position: relative;
+  margin: auto 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url('/src/assets/icons/app-29.svg');
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  margin: 100px auto;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.Nav-cards {
+  gap: 20px;
+}
+
+.landing-sec {
+  margin: 0;
+  position:relative;
+  text-align: left;
+}
+
+.cover-1 {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url('/src/assets/images/mountains.jpg');
+}
+
+.cover-2 {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url('/src/assets/images/calc.webp');
+}
+
+.cover-3 {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url('/src/assets/images/stickynotes.jpg');
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -10%);
+}
+
+.centered-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -10%);
+}
+
+/* .centered-3 {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -10%);
+} */
+
+.Nav-card button {
+  width: 100px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Nav-card button:hover{
+  background-color: #434343;
+  color: white;
+}
+
+.bottom {
+  margin-top: 40px;
+  width: 100%;
+  height: 40px;
+}
