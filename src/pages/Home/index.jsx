@@ -53,7 +53,8 @@ const Home = () => {
         <div className="Nav-card landing-sec cover-3 rounded">
           <div className="centered-3">
             <h2>Sticky Notes App</h2>
-            <p>A sticky notes app creates digital notes for reminders, to-do lists, or short notes, aiding in organization.</p>
+            <p>A sticky notes app creates digital notes for reminders,</p>
+            <p>to-do lists, or short notes, aiding in organization.</p>
             <button onClick={()=>{
             navigate('/StickyNotes')
           }}>Check it Out!</button>

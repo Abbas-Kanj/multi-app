@@ -80,6 +80,7 @@
   width: 700px;
   height: 300px;
   background-image: url('/src/assets/images/stickynotes.jpg');
+  overflow: hidden;
 }
 
 .centered {
@@ -87,6 +88,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-90%, -10%);
+  color:#ffffff;
 }
 
 .centered-2 {
@@ -94,14 +96,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-90%, -10%);
+  color:#ffffff;
 }
 
-/* .centered-3 {
+.centered-3 {
   position:relative;
   top: 50%;
-  left: 50%;
-  transform: translate(-90%, -10%);
-} */
+  left: 5%;
+  color:#ffffff;
+}
 
 .Nav-card button {
   width: 100px;
