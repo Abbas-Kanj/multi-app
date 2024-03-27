@@ -2,14 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 
-const Calculator = () => {
+const Calculator = ({initial}) => {
   const navigate = useNavigate();
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(initial);
   const [calculations,setCalculations] = useState([]);
 
-  useEffect((setCalculations)=>{
-    console.log(calculations);
-  })
+  useEffect(()=>{
+    console.log(count);
+    console.log(calculations)
+    // [calculations, count]
+    // setCount([calculations, count])
+  }, )
 
   return (
     <div className="calc-bg body rubik-regular">
@@ -33,7 +36,7 @@ const Calculator = () => {
 
       <div className="calc flex column center">
         <div className="calc-display flex column">
-          <h1>{count}</h1>
+          <h1>{initial}</h1>
         </div>
         <div className="">
           <div className="calc-btns flex row">
@@ -118,20 +121,18 @@ const Calculator = () => {
               setCalculations([calculations, count])
             }}>,</button>
             <button onClick={()=>{
-              setCount(count+'+')
-              setCalculations([calculations, count])
+              setCalculations([eval(calculations[1])])
+              console.log(setCalculations)
+              return (
+                
+                setCount([calculations, initial])
+                )
             }}>=</button>
           </div>
         </div>
       </div>
 
-
       <div className="bottom"></div>
-      {/* {
-      calculations.map((value, index)=>{
-        return initial={index};
-      })
-    } */}
     </div>
     
   )

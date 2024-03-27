@@ -17,7 +17,6 @@ const Weather = () => {
   const searchPressed = () => {
     fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
       .then((response) => response.json())
-      // 
       .then((result) => {
         setWeather(result);
         console.log(result)
