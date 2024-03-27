@@ -1,10 +1,18 @@
+.calc-bg{
+    background-image:url('/src/assets/images/calc.webp');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
 .calc {
     width: fit-content;
     height: 450px;
     margin: 100px auto;
-    border: 15px solid rgb(36, 42, 56);
+    border: 15px solid #313131d2;
     border-radius: 15px;
-    background-color: #252B39;
+    background-color: #313131d2;
 }
 
 .calc-display{

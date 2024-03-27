@@ -6,7 +6,7 @@ const Calculator = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="body rubik-regular">
+    <div className="calc-bg body rubik-regular">
       <nav className="flex row nav-bar black-text-p">
         <div><i className="icon"></i></div>
         <div className="flex row nav-bar-anchors">
