@@ -34,6 +34,7 @@ const Weather = () => {
     const response = await axios.get(`${api.base}forecast?lat=${weather.coord.lat}&lon=${weather.coord.lon}&appid=${api.key}`);
     setUpcomingForecast(response.data);
     console.log(response.data);
+    
   };
   
 
@@ -42,7 +43,7 @@ const Weather = () => {
   }, [])
 
   return (
-    <div className="body rubik-regular">
+    <div className="body weather-bg rubik-regular">
       <nav className="flex row nav-bar black-text-p">
         <div><i className="icon"></i></div>
         <div className="flex row nav-bar-anchors">
@@ -71,10 +72,10 @@ const Weather = () => {
       </div>
       
 
-      {typeof weather.main !== "undefined" ? (
+      {typeof weather.main !== "undefined" && upcomingForecast.list && upcomingForecast.list.length >= 24 ? (
         <>
       <div className="header-name flex center">
-        <h1>{weather.name} Overview</h1>
+        <h1>{weather.name}'s Weather</h1>
       </div>
 
       <div className=" flex column center">
@@ -100,10 +101,25 @@ const Weather = () => {
         </div>
       </div>
 
-      <div className="flex column center">
-        <div className=""></div>
-        <div className=""></div>
-        <div className=""></div>
+      <div className="flex row center">
+        <div className="upcoming-cards flex column center">
+          <h2>{weather.name}</h2>
+          <p> at {upcomingForecast.list[8].dt_txt}</p>
+          <h3>{upcomingForecast.list[8].weather[0].main}</h3>
+          <p>{upcomingForecast.list[8].weather[0].description}</p>
+        </div>
+        <div className="upcoming-cards flex column center">
+          <h2>{weather.name}</h2>
+          <p> at {upcomingForecast.list[15].dt_txt}</p>
+          <h3>{upcomingForecast.list[15].weather[0].main}</h3>
+          <p>{upcomingForecast.list[15].weather[0].description}</p>
+        </div>
+        <div className="upcoming-cards flex column center">
+          <h2>{weather.name}</h2>
+          <p> at {upcomingForecast.list[23].dt_txt}</p>
+          <h3>{upcomingForecast.list[23].weather[0].main}</h3>
+          <p>{upcomingForecast.list[23].weather[0].description}</p>
+        </div>
       </div>
       </>
       ) : (
