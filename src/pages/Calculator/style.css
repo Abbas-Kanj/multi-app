@@ -10,9 +10,9 @@
     width: fit-content;
     height: 450px;
     margin: 100px auto;
-    border: 15px solid #313131d2;
+    border: 15px solid rgb(36, 42, 56);
     border-radius: 15px;
-    background-color: #313131d2;
+    background-color: #252B39;
 }
 
 .calc-display{
@@ -24,6 +24,9 @@
     border-radius: 15px;
 }
 
+.calc-display h1{
+    padding-right: 10px;
+}
 
 .calc-btns button{
     flex-grow: 1;
@@ -33,7 +36,7 @@
     justify-content: center;
     color: white;
     background-color: #ffffff;
-    color: #252B39;
+    color: black;
     border-radius: 15px;
     margin: 10px 3px auto 3px;
     font-size: large;
