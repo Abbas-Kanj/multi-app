@@ -75,7 +75,7 @@ const Weather = () => {
       {typeof weather.main !== "undefined" && upcomingForecast.list && upcomingForecast.list.length >= 24 ? (
         <>
       <div className="header-name flex center">
-        <h1>{weather.name}'s Weather</h1>
+        <h1>Today's {weather.name} Weather</h1>
       </div>
 
       <div className=" flex column center">
