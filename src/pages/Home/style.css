@@ -5,23 +5,21 @@
   overflow: auto;
 }
 
-.body {
+.body{
+  height: 100vh;
   width: 100%;
-  height: auto;
-  background-image:url('/src/assets/images/bg-img.jpg');
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: repeat;
-  background-size: cover;
+  background-color: #ffffff;
 }
 
 .nav-bar {
+  margin-top: 0;
   height: auto;
   width: 100%;
   padding: 10px;
   justify-content: space-around;
   align-items: center;
   border-bottom: 2px solid black;
+  background-color: #252B39;
 }
 
 .nav-bar-anchors button {
@@ -31,15 +29,15 @@
   font-weight: bold;
   background-color: transparent;
   cursor: pointer;
+  color: white;
 }
 
 .icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-left: 10px;
   background-image: url('/src/assets/icons/app-29.svg');
-  background-size: cover;
 }
 
 .header {
@@ -64,21 +62,21 @@
 
 .cover-1 {
   background-size: cover;
-  width: 100%;
+  width: 700px;
   height: 300px;
   background-image: url('/src/assets/images/mountains.jpg');
 }
 
 .cover-2 {
   background-size: cover;
-  width: 100%;
+  width: 700px;
   height: 300px;
   background-image: url('/src/assets/images/calc.webp');
 }
 
 .cover-3 {
   background-size: cover;
-  width: 100%;
+  width: 700px;
   height: 300px;
   background-image: url('/src/assets/images/stickynotes.jpg');
 }

@@ -42,7 +42,7 @@ const Weather = () => {
   }, [])
 
   return (
-    <div className="body flex column center rubik-regular">
+    <div className="body rubik-regular">
       <nav className="flex row nav-bar black-text-p">
         <div><i className="icon"></i></div>
         <div className="flex row nav-bar-anchors">
@@ -73,15 +73,15 @@ const Weather = () => {
 
       {typeof weather.main !== "undefined" ? (
         <>
-      <div className="header-name">
+      <div className="header-name flex center">
         <h1>{weather.name} Overview</h1>
       </div>
 
-      <div className="flex column center">
-        <div className="flex row">
+      <div className=" flex column center">
+        <div className=" overview-cards flex row">
           <div className="overview-card flex column">
             <h2>Windspeed</h2>
-            <p>{weather.wind.speed}</p>
+            <p>{weather.wind.speed} KM/H</p>
           </div>
           <div className="overview-card flex column">
             <h2>{weather.weather[0].main}</h2>
@@ -91,7 +91,7 @@ const Weather = () => {
         <div className="flex row">
           <div className="overview-card flex column">
             <h2>Temprature</h2>
-            <p>{weather.main.temp}</p>
+            <p>{weather.main.temp} *</p>
           </div>
           <div className="overview-card flex column">
             <h2>Humidity</h2>
