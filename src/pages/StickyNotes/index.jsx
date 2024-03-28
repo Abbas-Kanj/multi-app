@@ -5,22 +5,29 @@ import "./style.css";
 const StickyNotes = () => {
   const navigate = useNavigate();
   
-  const mainDivRef = useRef(null);
+  const descDivRev = useRef(null);
+  const mainDiv = useRef(null);
+
+  const deleteDiv = ()=>{
+    if (mainDiv.current){
+      mainDiv.current.remove();
+    }
+  }
 
   const handleClick = (className) => {
-    if (mainDivRef.current) {
-      mainDivRef.current.style.backgroundColor = getBackgroundColor(className);
+    if (descDivRev.current) {
+      descDivRev.current.style.backgroundColor = getBackgroundColor(className);
     }
   };
 
   const getBackgroundColor = (className) => {
     switch (className) {
       case 'done-btn':
-        return 'green';
+        return '#008000';
       case 'pending-btn':
         return '#fefe25';
       case 'canceled-btn':
-        return 'red';
+        return '#ff0000';
       default:
         return 'yellow';
     }
@@ -50,7 +57,7 @@ const StickyNotes = () => {
         <button>Create a Sticky Note!</button>
         </div>
       
-      <div className="flex column center sticky-note-container">
+      <div ref={mainDiv} className="flex column center sticky-note-container">
         <div className="flex row sticky-note-bar">
           <div className="s-n-b-1 flex">
             <button className="done-btn" onClick={() => handleClick('done-btn')}>.</button>
@@ -58,10 +65,10 @@ const StickyNotes = () => {
             <button className="canceled-btn" onClick={() => handleClick('canceled-btn')}>.</button>
           </div>
           <div className="flex">
-            <button className="delete-btn">X</button>
+            <button className="delete-btn" onClick={deleteDiv}>X</button>
           </div>
         </div>
-        <div ref={mainDivRef} className="flex column sticky-note-main">
+        <div ref={descDivRev} className="flex column sticky-note-main">
           <input type="text" placeholder="Sticky Note Title..."/>
           <textarea placeholder="Sticky Note Description..."/>
         </div>

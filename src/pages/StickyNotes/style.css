@@ -50,13 +50,13 @@
 }
 
 .done-btn {
-    background-color: green;
+    background-color: #008000;
 }
 .pending-btn {
-    background-color: yellow;
+    background-color: #ffff00;
 }
 .canceled-btn {
-    background-color: red;
+    background-color: #ff0000;
 }
 
 .sticky-note-main{
@@ -66,11 +66,18 @@
     justify-content: space-around;
     padding: 5px;
 }
+.sticky-note-main input::placeholder{
+    color: #FFFFFF;
+}
 
 .sticky-note-main input{
     background-color: transparent;
     width: fit-content;
     outline: none;
+    color: #000000;
+}
+
+.sticky-note-main textarea::placeholder{
     color: #000000;
 }
 
