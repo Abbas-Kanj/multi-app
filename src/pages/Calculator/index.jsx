@@ -14,6 +14,14 @@ const Calculator = ({initial}) => {
     // setCount([calculations, count])
   }, )
 
+  const calculate = () =>{
+  setCalculations([eval(calculations[1])])
+  console.log(setCalculations)
+  return (
+    setCount([...calculations, count])
+    )
+  }
+
   return (
     <div className="calc-bg body rubik-regular">
       <nav className="flex row nav-bar black-text-p">
@@ -36,7 +44,7 @@ const Calculator = ({initial}) => {
 
       <div className="calc flex column center">
         <div className="calc-display flex column">
-          <h1>{initial}</h1>
+          <h1>{calculations}</h1>
         </div>
         <div className="">
           <div className="calc-btns flex row">
@@ -120,19 +128,11 @@ const Calculator = ({initial}) => {
               setCount(count+'.')
               setCalculations([calculations, count])
             }}>,</button>
-            <button onClick={()=>{
-              setCalculations([eval(calculations[1])])
-              console.log(setCalculations)
-              return (
-                
-                setCount([calculations, initial])
-                )
-            }}>=</button>
+            <button onClick={calculate}>=</button>
           </div>
         </div>
       </div>
 
-      <div className="bottom"></div>
     </div>
     
   )

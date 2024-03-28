@@ -1,0 +1,83 @@
+.sticky-notes-bg {
+    background-image:url('/src/assets/images/stickynotes.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.create-sticky-btn {
+    margin-top: 50px;
+    height: auto;
+}
+
+.create-sticky-btn button{
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #434343;
+    color: #FFFFFF;
+}
+
+.create-sticky-btn button:hover{
+    background-color: #4a4a4a;
+    color: #FFFFFF;
+}
+
+.sticky-note-container{
+    margin-top: 50px;
+    height: auto;
+}
+
+.sticky-note-bar{
+    height: 30px;
+    width: 250px;
+    background-color: #434343;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.sticky-note-bar button{
+    width: 16px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.s-n-b-1{
+    gap: 5px;
+}
+
+.done-btn {
+    background-color: green;
+}
+.pending-btn {
+    background-color: yellow;
+}
+.canceled-btn {
+    background-color: red;
+}
+
+.sticky-note-main{
+    height: 200px;
+    width: 250px;
+    background-color: #fefe25;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.sticky-note-main input{
+    background-color: transparent;
+    width: fit-content;
+    outline: none;
+    color: #000000;
+}
+
+.sticky-note-main textarea{
+    resize: 'vertical';
+    overflow: 'auto'; 
+    padding: '2px';
+    margin: '5px';
+    height: 70%;
+}

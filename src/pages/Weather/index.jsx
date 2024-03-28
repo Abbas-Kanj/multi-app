@@ -124,7 +124,6 @@ const Weather = () => {
       ) : (
         ""
       )}
-      <div className="bottom"></div>
     </div>
   )
 }
