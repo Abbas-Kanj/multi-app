@@ -26,6 +26,10 @@
   display: flex;
 }
 
+.wrap{
+  flex-wrap: wrap;
+}
+
 .row {
   flex-direction: row;
 }

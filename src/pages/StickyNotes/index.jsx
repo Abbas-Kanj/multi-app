@@ -3,15 +3,37 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 const StickyNotes = () => {
+
   const navigate = useNavigate();
-  
   const descDivRev = useRef(null);
   const mainDiv = useRef(null);
+  const [newSticktyNotes, setNewSticktyNotes] = useState([]);
 
   const deleteDiv = ()=>{
     if (mainDiv.current){
       mainDiv.current.remove();
     }
+  }
+
+  const createStickyNote = ()=>{
+    const newStickyNote = [...newSticktyNotes, <div className="sticky-note-container-creater" key={newSticktyNotes.length}>{<div ref={mainDiv} className="flex column  sticky-note-container">
+    <div className="flex row sticky-note-bar">
+      <div className="s-n-b-1 flex">
+        <button className="done-btn" onClick={() => handleClick('done-btn')}>.</button>
+        <button className="pending-btn" onClick={() => handleClick('pending-btn')}>.</button>
+        <button className="canceled-btn" onClick={() => handleClick('canceled-btn')}>.</button>
+      </div>
+      <div className="flex">
+        <button className="delete-btn" onClick={deleteDiv}>X</button>
+      </div>
+    </div>
+    <div ref={descDivRev} className="flex column sticky-note-main">
+      <input type="text" placeholder="Sticky Note Title..."/>
+      <textarea placeholder="Sticky Note Description..."/>
+    </div>
+  </div>}</div>]
+
+    setNewSticktyNotes(newStickyNote)
   }
 
   const handleClick = (className) => {
@@ -29,7 +51,7 @@ const StickyNotes = () => {
       case 'canceled-btn':
         return '#ff0000';
       default:
-        return 'yellow';
+        return '#fefe25';
     }
   };
 
@@ -54,10 +76,15 @@ const StickyNotes = () => {
       </nav>
 
       <div className="flex rounded center create-sticky-btn">
-        <button>Create a Sticky Note!</button>
+        <button onClick={createStickyNote}>Create a Sticky Note!</button>
         </div>
       
-      <div ref={mainDiv} className="flex column center sticky-note-container">
+      <div className="flex row wrap sticky-note-container-creater">
+        {newSticktyNotes.map((div, index)=>(
+          <React.Fragment key={index}>{div}</React.Fragment>
+        ))}
+      </div>
+      {/* <div ref={mainDiv} className="flex column center sticky-note-container">
         <div className="flex row sticky-note-bar">
           <div className="s-n-b-1 flex">
             <button className="done-btn" onClick={() => handleClick('done-btn')}>.</button>
@@ -72,8 +99,9 @@ const StickyNotes = () => {
           <input type="text" placeholder="Sticky Note Title..."/>
           <textarea placeholder="Sticky Note Description..."/>
         </div>
-      </div>
-
+      </div> */}
+      
+       
     </div>
   );
 }

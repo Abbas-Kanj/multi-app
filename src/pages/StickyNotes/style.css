@@ -25,6 +25,10 @@
     color: #FFFFFF;
 }
 
+.sticky-note-container-creater{
+    margin: 0 10px;
+}
+
 .sticky-note-container{
     margin-top: 50px;
     height: auto;
@@ -67,7 +71,7 @@
     padding: 5px;
 }
 .sticky-note-main input::placeholder{
-    color: #FFFFFF;
+    color: #000000;
 }
 
 .sticky-note-main input{
@@ -82,7 +86,7 @@
 }
 
 .sticky-note-main textarea{
-    resize: 'vertical';
+    resize: vertical;
     overflow: 'auto'; 
     padding: '2px';
     margin: '5px';
